@@ -185,3 +185,66 @@ class AnalyseNodeData: NSObject {
         return sum
     }
 }
+
+class AnsoNodeModel: NSObject {
+    
+    var parentID:String?        // 父结点ID 即当前结点所属的的父结点ID
+    var childrenId:String?      // 子结点ID 即当前结点的ID
+    var nodeName:String?        // 结点名字
+    var level:Int?              // 结点层级 从1开始
+    var leaf:Bool?              // 树叶(Leaf) If YES：此结点下边没有结点咯
+    var root:Bool?              // 树根((Root) If YES: parentID = nil
+    var expand:Bool?            // 是否展开
+    var dataArrM:NSMutableArray?// 子结点下的数据
+    var searchDescrib:String?   // 描述文字，用于搜索
+    
+    // 基础资料
+    var deviceCount:String?     // 仪表数量
+    var deviceNumber:String?    // 仪表编号
+    var deviceCaliber:String?   // 仪表口径
+    var deviceCard:String?      // SIM卡号
+    var userNumber:String?      // 用户编号
+    var userName:String?        // 用户名称
+    var userSite:String?        // 用户地址
+    var userType:String?        // 用户类型
+    var userType_Num:String?    // 用户类型编号
+    var waterManager:String?    // 所属水司
+    var organization:String?    // 所属组织
+    var organization_Num:String?  // 组织编号
+    var deviceType:String?      // 仪表类型
+    var deviceType_Num:String?  // 仪表类型编号
+    var deviceInsertTime:String?// 安装日期
+    var measureData:String?     // 测量参数
+    var meterDataType:String?   // 测量数据类型
+    var uPid:String?            // 用于查找数据详情
+    var dataSource:String?      // 数据源（APP/..）
+    
+    // 用户信息
+    var provinceName:String?    // 省份名称
+    var cityName:String?        // 城市名称
+    var compandName:String?     // 公司名称
+    var authorCode:String?      // 授权码
+    var serviceUrl:String?      // 服务URL
+    var longitude:String?       // 经度
+    var latitude:String?        // 纬度
+    var areaName:String?        // 所属区域
+    var cityCode:String?        // 城市编码/区域编码
+    var ipSite:String?          // IP地址
+    
+    // 事件信息
+    var eventName:String?       // 事件名称
+    var eventTime:String?       // 事件时间
+    var eventStatus:String?     // 事件状态
+    var eventLevel:String?      // 事件等级
+    
+    // 用水分析
+    var leftName:String?        // 左标题文字描述
+    var rightDescrib:String?    // 右边文字描述
+    
+    // 水表分布
+    var flow:String?            // 流量
+    var flowDate:String?        // 流量日期
+    var pressure:String?        // 压力
+    var pressureDate:String?    // 压力日期
+    
+}
